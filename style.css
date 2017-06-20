@@ -1,0 +1,10 @@
+header::before {
+	color: #ccc
+}
+header::after {}
+header::{
+    background-color: lightblue;
+}
+div .class {
+	background-color: #fff
+}
