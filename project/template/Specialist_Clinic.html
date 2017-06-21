@@ -3,23 +3,24 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 <header>
-	<div class="container">
+	<div id="home">
 		<img src="../images/logo/arms.png">
 		<header>Phòng khám chuyên khoa</header>
 		<label>Vạt lý  trị liệu - Phục hồi chức năng</label>
-		<div class="support">
-			<img src="../images/icon/phone-icon.png">
-			<label>Câu hỏi cho bác sĩ</label>
-			<label>05113941977</label>
-		</div>
+		
+	</div>
+	<div id="support">
+		<img src="../images/icon/phone-icon.png">
+		<label>Câu hỏi cho bác sĩ</label>
+		<label>05113941977</label>
 	</div>
 </header>
 <main>
-	<div class="container">
-		<nav>
+	<div id="menu">
 		<ul>
 		<li><a href="home.html">Trang chủ</a></li>
 		<li><a href="intro.html">Giới thiệu</a></li>
@@ -28,19 +29,18 @@
 		<li><a href="set-calendar.html">Đặt lịch khám</a></li>
 		<li><a href="suiccide.html">Tư vấn - Liên hệ</a></li>
 		</ul>
-		</nav>
-		<div class="social">
+	</div>
+	<div id="social">
 			<a href="https://www.facebook.com/"><img src="../images/social/facebook.png"></a>
 			<a href="https://www.google.com/"><img src="../images/social/google.png"></a>
 			<a href="https://www.youtube.com/"><img src="../images/social/youtube.png"></a>
-		</div>
 	</div>
-	<div>
+	<div id="middle">
 		<img src="../images/picture/doctor.png">
 		<a href="home.html">Trang chủ</a>
 		<a href="serice.html">Dịch vụ y tế</a>
 	</div>
-	<div class="adjust">
+	<div class ="submenuAdult">
 		<label>Người lớn</label>
 		<img src="../images/icon/less.png">
 		<nav>
@@ -57,7 +57,7 @@
 		</ul>
 		</nav>
 	</div>
-		<div class="adjust">
+	<div class="submenuChild">
 		<label>Trẻ em</label>
 		<img src="../images/icon/add.png">
 		<nav>
@@ -81,7 +81,8 @@
 		<input type="text" name="phone-num" value="Số điện thoại"><br>
 		<input  id="dateime" type="datetime-local" value="datetime-local">
 	</form>
-	<form>
+	<div id="product">
+		<div id="item">
 		<ul>
 		<li><a href="#"><img src="../images/item/item1.png">Đau cổ vai tay</a></li>
 		<li><a href="#">
@@ -89,11 +90,14 @@
 		</a></li>
 		<li><a href="#"><img src="../images/icon/arrow.png"></a></li>
 		</ul>
-	</form>
+
+	</div>	
+	</div>
+	
 </main>
 <footer>
 	<div class="container">
-		<div class="about">
+		<div id="about">
 			<label>Về phòng khám</label>
 			<ul>
 			<li><a href="#">Giới thiệu chung</a></li>
@@ -101,7 +105,7 @@
 			<li><a href="#">Trang thiết bị và cơ sở vật chất</a></li>
 			</ul>
 		</div>
-		<div class="supportlink">
+		<div id="supportlink">
 			<label>Hỗ trợ</label>
 			<ul>
 			<li><a href="#">Tư vấn sức khỏe</a></li>
@@ -109,7 +113,7 @@
 			<li><a href="#">Đặt lịch khám</a></li>
 			</ul>
 		</div>
-		<div class="socialcconnect">
+		<div id="socialcconnect">
 			<label>Kết nối xã hội</label>
 			<ul>
 			<li><a  href="#" ><img src="../images/social/facebook.png"> Facebook</a></li>
