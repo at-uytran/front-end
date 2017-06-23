@@ -92,39 +92,69 @@ footer :: ul li {
     left: 0px;
     top: 0px;
 }*/
-#item{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 1px solid #ebebeb;
-    width: 33%;
-    background: #fff; 
-    display: inline-block;
+
+/*.leftsubmenu :: img{
+    line-height: 30px;
+}*/
+.left1, .left2{
+    line-height: 30px;
+    background-color: #d9e4e9;
 }
+
 .submenuChild, .submenuAdult{
     border: 1px solid #ebebeb;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 form{
     border: 1px solid #ebebeb;
+    background-color: #d9e4e9;
+    margin-right: 10%;
+    margin-left: 10%;
 }
-input{
+#setcal{
+    line-height: 30px;
+}
+input {
     width: 80%;
     margin: 0 auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-style: none;
 }
-.button {
-    background-color: #4CAF50; /* Green */
+
+#set-calendar{
+    padding-left: 30%;
+    padding-right: 30%;
+
+}
+
+.setcalbtn {
+    background-color: #4bbc56; /* Green */
+    padding-left: 30%;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 20px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    /*text-decoration: none;*/
+/*  display: inline-block;*/
     font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 .leftsubmenu img{
     float: right;
-
+    padding-top: 15px;
+    padding-right: 15px;
 }
+.leftsubmenu label{
+    margin-left: 15px;
+}
+
 a:hover{
     color: #95d6fa;
 }
@@ -198,19 +228,37 @@ a {
 #home img{
     float: left;
 }
-
+#home label{
+    line-height: 30px;
+    margin-left: 20px;
+}
 .container{
-    max-width: 1240px;
+    max-width: 1244px;
     display: block;
     margin: 0 auto;
     border: none;
 
 }
-
+#item li{
+background: #fff;
+  list-style-type: none;
+  text-align: left;
+  margin-left: -15px;
+}
 #item img{
     max-width: 100%;
 }
-
+#item{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ebebeb;
+    width: 33%;
+    background: #fff; 
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
 #about{
 float: left;
 width: 33%;
