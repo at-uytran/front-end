@@ -5,6 +5,15 @@
     display: table;
     clear: both;
 }
+@font-face {
+font-family:font_strong;
+src:url(‘../fonts/Captureit.ttf’) format(‘truetype’),
+url(‘../fonts/Captureit.eot#iefix’) format(’embedded-opentype’),
+url(‘../fonts/Captureit.woff’) format(‘woff’);
+font-weight:normal;
+ font-style:normal;
+}
+
 
 header::before {
 	color: #000;
@@ -28,51 +37,14 @@ footer{
 .class {
 	background-color: #fff
 }
-/*main{
-    float: left;
-}*/
 
-
-/*ul {
-    background: #3399ff;
-    padding: 20px;
-}
-*/
-/*
-header :: ul li {
-    background: #fff;
-    margin: 5px;
-}
-
-footer :: ul li {
-    background: lightblue;
-    margin: 5px;
-}*/
-
-/*.submenuChild, .submenuAdult{
-    background: #fff;
-    margin-left: -5px;
-  list-style-type: none;
-  text-align: left;
-}*/
 .footinfo{
     color: white;
 }
 .footinfo a{
     color: white;
 }
-.leftsubmenu{
-    width: 27%;
-    float: left;
-    /*margin-right: 2%;*/
-}
-.products{
-    width: 70%;
-    float: right;
-}
-/*#middle {
-    float: left;
-}*/
+
 .middle {
     background-image: url("../images/picture/doctor.png");
     float: left;
@@ -87,15 +59,6 @@ footer :: ul li {
     line-height: 200px;
 }
 
-/*#middle a{
-    position: relative;
-    left: 0px;
-    top: 0px;
-}*/
-
-/*.leftsubmenu :: img{
-    line-height: 30px;
-}*/
 .left1, .left2{
     line-height: 30px;
     background-color: #d9e4e9;
@@ -117,6 +80,7 @@ form{
 #setcal{
     line-height: 30px;
 }
+
 input {
     width: 80%;
     margin: 0 auto;
@@ -145,6 +109,9 @@ input {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;  
 }
 .leftsubmenu img{
     float: right;
@@ -155,6 +122,15 @@ input {
     margin-left: 15px;
 }
 
+.leftsubmenu{
+    width: 27%;
+    float: left;
+    /*margin-right: 2%;*/
+}
+.products{
+    width: 70%;
+    float: right;
+}
 a:hover{
     color: #95d6fa;
 }
@@ -231,6 +207,7 @@ a {
 #home label{
     line-height: 30px;
     margin-left: 20px;
+    
 }
 .container{
     max-width: 1244px;
@@ -240,17 +217,16 @@ a {
 
 }
 #item li{
-background: #fff;
-  list-style-type: none;
-  text-align: left;
-  margin-left: -15px;
+    position: relative;
+    background: #fff;
+    list-style-type: none;
+    text-align: left;
+    margin-left: -35px;
 }
 #item img{
     max-width: 100%;
 }
 #item{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ebebeb;
     width: 33%;
