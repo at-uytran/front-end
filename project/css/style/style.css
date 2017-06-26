@@ -16,10 +16,10 @@ font-weight:normal;
 
 
 header::before {
-	color: #000;
+    color: #000;
 }
 /*label {
-	color: black;
+    color: black;
 }*/
 header::after {
     background-color: #C00 ;
@@ -35,7 +35,7 @@ footer{
         width: 100%;
 }
 .class {
-	background-color: #fff
+    background-color: #fff
 }
 
 .footinfo{
