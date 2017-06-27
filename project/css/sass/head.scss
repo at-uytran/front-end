@@ -9,34 +9,46 @@ $ocen-green: #4cc1fc;
     background-color: #fff
 }
 
-
 a {
     color: gray;
     text-decoration: none;
     /*doi mau va xoa gach duoi link*/
 }
-
+h1{
+    font-weight: bold;
+    font-size: 16px;
+}
+h2{
+    font-size: 13px;
+}
 #home{
-    width: 70%;
+    width: 60%;
     height: 70px;
     float: left;
     img{
         float: left;
     }
-    label{
+    h1,h2{
         line-height: 30px;
-        margin-left: 20px;  
+        padding-left: 84px;  
     }
 }
 #support{
+    margin-top: 15px;
     height: 70px;
-    width: 28%;
+    width: 20%;
     float: right;
-    label{
-        &:nth-child(3){
-            color: $ocen-green;
-            font-weight: bold;
-        }
+    display: inline-block;
+    img{
+        float: left;
+    }
+    h3{
+        color: $ocen-green;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    h2,h3{
+        display: inline-block;
     }
 }
 .container{

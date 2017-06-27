@@ -11,6 +11,7 @@
     display: inline-block;
     margin-bottom: 15px;
     margin-top: 15px;
+    padding-top: 0px;
     img{
     	max-width: 100%;
     }
@@ -26,7 +27,6 @@
 	    margin-left: -35px;
 	    &:nth-child(1){
 	    	    font-weight: bold;
-
 	    }
     }
     &:nth-child(3n+1){
