@@ -63,5 +63,8 @@ input {
     }
     a{
         color: #000;
+        &:hover{
+                color: #95d6fa;
+        }
     }
 }

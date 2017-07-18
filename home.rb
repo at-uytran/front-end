@@ -2,5 +2,5 @@ require "sinatra"
 
 get '/' do
 	# "hello sinatra"
-	send_file File.join( 'project', 'template/index.html')
+	send_file File.join( 'public', 'template/index.html')
 end

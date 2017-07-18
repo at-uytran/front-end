@@ -22,7 +22,7 @@ h2{
     font-size: 13px;
 }
 #home{
-    width: 60%;
+    width: 70%;
     height: 70px;
     float: left;
     img{
@@ -36,7 +36,7 @@ h2{
 #support{
     margin-top: 15px;
     height: 70px;
-    width: 20%;
+    width: 30%;
     float: right;
     display: inline-block;
     img{
@@ -67,6 +67,9 @@ h2{
         padding-top: 20px,20px;
         color: #000;
         font-weight: bold;
+        &:hover{
+                color: #95d6fa;
+}
 
     }
     span{
