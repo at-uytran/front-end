@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+names: Array<string>=[];
+  addMember = (event) :void => {
+    this.names.push(event);
+  }
 }
