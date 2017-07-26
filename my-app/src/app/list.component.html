@@ -1,0 +1,8 @@
+<div *ngIf="!hidden">
+  <li *ngFor="let name of data" >
+    <span >{{name}}</span>
+    <button type="button" name="button"  (click)="(deleteMember(name))">
+      Delete
+    </button>
+  </li>
+</div>
