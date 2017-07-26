@@ -1,16 +1,14 @@
-import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'form-input',
   templateUrl: './form.component.html',
 })
 export class FormComponent {
-      name: string;
-
-	@Output() results: EventEmitter<string> = new EventEmitter<string>();
-
+ name: string;
+	@Output() member: EventEmitter<string> = new EventEmitter<string>();
+      // this addMember is sending eventEmit out of form.
 	addMember= () :void =>{
-		this.add.emit(this.name);
-		this.name = '';
+		this.member.emit(this.name);
 	}
 }

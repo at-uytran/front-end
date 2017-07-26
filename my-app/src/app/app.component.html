@@ -1,5 +1,10 @@
 
-<form-input (results)="addMember($event)"></form-input>
+<form-input (member)="addMember($event)">Loadding</form-input>
 
-<list-members [data]="names">
-	</list-members>
+<list-members [data]="data">Loadding...</list-members>
+
+    <my-alert>My alert</my-alert>
+    <button (click)="showAlert()">Show Alert</button>
+
+          <button (click)="showList()">Show Name</button>
+          <button (click)="hideList()">Hide Name</button>

@@ -5,13 +5,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FormComponent } from './form.component';
-import { ListComponent } from './list.component'
+import { ListComponent } from './list.component';
+import { AlertComponent } from './alert.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    ListComponent
+    ListComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
