@@ -1,0 +1,35 @@
+
+<table>
+<tr>
+  <th>Name</th>
+  <th>Birthday</th>
+  <th>Team</th>
+</tr>
+<tr *ngFor = "let trainer of trainers" [ngSwitch] = "trainer?.team">
+  <td>{{trainer.name}}</td>
+
+  <td *ngIf = "trainer.birthday, else empty">{{trainer.birthday}}</td>
+
+  <ng-template #empty><p [ngStyle] = "{'background-color': 'gray'}">Empty</p></ng-template>
+
+  <td *ngSwitchCase = "'Ruby'" [ngStyle]="{'color': 'red'}">{{trainer.team}}</td>
+
+  <td *ngSwitchCase = "'FE'" [ngStyle]="{'color': 'yellow'}">{{trainer.team}}</td>
+
+  <td><button (click) = "trainer.isShow = !trainer.isShow">Detail</button></td>
+
+ 
+  <!-- <td [ngClass] = "{ 'styleFE': {{trainer.team === 'FE'}}, styleRuby: {{trainer.team}} === 'Ruby'}">{{trainer.team}}</td> -->
+</tr>
+</table>
+
+<div *ngFor = "let trainer of trainers"  class="show">
+   <div *ngIf = "trainer.isShow" >My name is {{trainer.name}}, I was born at 
+
+    <p *ngIf = "trainer.birthday, else empty2">{{trainer.birthday}}</p>
+
+    <ng-template #empty2><button [ngStyle] = "{'background-color': 'gray'}">Empty</button></ng-template>
+    
+     and I'm in {{trainer.team}} team.
+  </div>
+</div>
