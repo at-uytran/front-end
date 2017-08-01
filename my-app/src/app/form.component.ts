@@ -10,7 +10,7 @@ export class FormComponent {
 	@Output() results: EventEmitter<string> = new EventEmitter<string>();
 
 	addMember= () :void =>{
-		this.add.emit(this.name);
+		this.results.emit(this.name);
 		this.name = '';
 	}
 }
