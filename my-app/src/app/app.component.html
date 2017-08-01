@@ -3,12 +3,14 @@
 <div class="content">
   <table class="table-striped">
 <tr>
+  <th>Avatar</th>
   <th>Name</th>
   <th>Birthday</th>
   <th>Team</th>
   <th>Option</th>
 </tr>
 <tr *ngFor = "let trainer of trainers" [ngSwitch] = "trainer?.team">
+  <td [empty]="trainer.avatar"><img src="{{trainer.avatar}}" alt="avatar" class="img-circle"></td>
   <td [empty]="trainer.name">{{trainer.name}}</td>
   <td [empty]="trainer.birthday">{{trainer.birthday}}</td>
   <td *ngSwitchCase = "'Ruby'" [ngStyle]="{'color': 'red'}" [empty]="trainer.team">{{trainer.team}}</td>
@@ -20,10 +22,8 @@
   <div *ngFor = "let trainer of trainers"  class="show">
    <div *ngIf = "trainer.isShow" >
    <ul>
-     <li><img src="{{trainer.avatar}}" alt="avatar" class="img-circle">
-</li>
-    <li>My name is {{trainer.name}}, I was born at 
-{{trainer.birthday}} and I work in {{trainer.team}} team.</li>
+     <li><img src="{{trainer.avatar}}" alt="avatar" class="img-circle"></li>
+    <li>My name is {{trainer.name}}, I was born at {{trainer.birthday}} and I work in {{trainer.team}} team.</li>
    </ul>
 
 
