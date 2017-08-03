@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class TrainersService {
-trainers: any[] = [
-     { name: 'Kien', birthday: '1992', team: 'Ruby', avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8ARvRFLoWGkEmneyiZ6Yj-XDtwRG4ko2wxV5bzaaM1krpT40fng' },
-     { name: 'Vi', birthday: '1989', team: 'FE', avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA95wKwihQ4G1QxiFWWnvKSp5__Yr6a1ZjLxk-9kIiKzq6df_h' },
-     { name: 'Dong', birthday: '1993', team: 'FE', avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA95wKwihQ4G1QxiFWWnvKSp5__Yr6a1ZjLxk-9kIiKzq6df_h' }
-   ];
-   getTrainers(): any[] { 
-      return this.trainers; 
-   } 
-} 
+  // trainers: Array<string> = [];
+
+  constructor(private http: Http) {
+  }
+  getData() {
+   return this.http.get('/assets/data.json').map(res => res.json());
+  }
+}
