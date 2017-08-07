@@ -1,0 +1,22 @@
+<div class="container">
+<div class="content">
+  <table class="table-striped">
+<tr>
+  <th>Avatar</th>
+  <th>Name</th>
+  <th>Birthday</th>
+  <th>Team</th>
+  <th>Option</th>
+</tr>
+<tr *ngFor = "let trainer of trainers; let id = index" [ngSwitch] = "trainer?.team">
+  <td [empty]="trainer.avatar"><img src="{{trainer.avatar}}" alt="avatar" class="img-circle"></td>
+  <td [empty]="trainer.name">{{trainer.name}}</td>
+  <td [empty]="trainer.birthday">{{trainer.birthday}}</td>
+  <td *ngSwitchCase = "'Ruby'" [ngStyle]="{'color': 'red'}" [empty]="trainer.team">{{trainer.team}}</td>
+  <td *ngSwitchCase = "'FE'" [ngStyle]="{'color': '#BFAC8A'}" [empty]="trainer.team">{{trainer.team}}</td>
+  <td><button (click) = "getDetail(id)" class="btn btn-success">Detail</button></td>
+</tr>
+</table>
+</div>
+
+</div>

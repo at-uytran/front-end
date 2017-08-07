@@ -6,11 +6,13 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class TrainersService {
-  // trainers: Array<string> = [];
 
   constructor(private http: Http) {
   }
   getData() {
-   return this.http.get('/assets/data.json').map(res => res.json());
+   return this.http.get('./assets/data.json').map(res => res.json());
+  }
+  getDetail() {
+    return this.http.get('./assets/data.json').map(res => res.json());
   }
 }
