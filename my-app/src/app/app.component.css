@@ -1,0 +1,33 @@
+.container{
+  width: 100%;
+}
+.content{
+  float: left;
+  width:60%;
+}
+table {
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  border-collapse: collapse; }
+  table tr:nth-child(odd) {
+    background: #CCC; }
+li{
+  list-style: none;
+}
+table, th, td {
+  border: 1px solid #333; }
+.btn{
+  margin: 3px;
+  padding: 2px;
+}
+.show{
+  float: right;
+  width:40%;
+  padding: 15px;
+}
+img{
+  width:100px;
+  height: 100px;
+}
