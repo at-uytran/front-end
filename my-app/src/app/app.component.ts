@@ -1,4 +1,4 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { MemberFormComponent } from './member_form.component';
 import { NgForm, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
@@ -7,23 +7,48 @@ import { NgForm, FormGroup, FormControl, FormBuilder, Validators } from '@angula
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  name: string = '';
+export class AppComponent implements OnInit{
   teams: any[];
   birthday: string = '';
-  constructor() {
+  selectedTeam ='';
+  displaySkills = '';
+  name = new FormControl('', [
+    Validators.minLength(5),
+  ]);
+  
+  constructor(private formBuilder: FormBuilder) {
     this.teams = ['Ruby', 'FE', 'PHP'];
-  }
-onChange(){
 
+  }
+
+memberForm: FormGroup;
+
+ngOnInit() {
+      console.log(1);
+          this.memberForm = this.formBuilder.group({
+        name : '',
+        birthday: '',
+        team: '',
+        skills: ''
+      })
 }
 
-  addMember(form: NgForm) {
-  var a = document.getElementById("list");
-  var b = document.createElement('li');
+ngDoCheck(){
+   this.memberForm.valueChanges.subscribe((form) => {
+     this.displaySkills = `${form.team}`;
+   });
+   console.log(this.displaySkills);
+}
+  addMember(memberForm: FormBuilder) {
+      console.log(2);
+
+    console.log(this.memberForm.value);
+
+  var list = document.getElementById("list");
+  var member = document.createElement('li');
   var c = document.createElement('span');
-  c.innerHTML = "name: "+ form.value.name + ", birthday:" +form.value.birthday;
-  b.appendChild(c);
-  a.appendChild(b);
+  c.innerHTML = "name: "+ this.memberForm.get('name').value + ", birthday:" +this.memberForm.value.birthday;
+  member.appendChild(c);
+  list.appendChild(member);
   }
 }

@@ -1,21 +1,23 @@
 <!-- <member-form [(ngModel)]="member"></member-form> -->
-<form #memberForm="ngForm" (ngSubmit)="addMember(memberForm)">
+<div class="show">
+<form [formGroup]= "memberForm" (ngSubmit)="addMember(memberForm)">
   <label for="name">Name</label>
-  <input type="text" name="name" id="name" ngModel>
+  <input type="text" class="form-control" id="name" placeholder="Your name" formControlName = "name">
   <label for="birthday">Birthday</label>
-  <input type="text" name="birthday" id="birthday" ngModel>
-  <select type="select" name="team">
-    <option value="Ruby">Ruby</option>
-    <option value="FE">FE</option>
-    <option value="PHP">PHP</option>
-  </select>
+  <input type="datetime-local" class="form-control" id="birthday" formControlName = "birthday">
 
-  <button type="submit">Add member</button>
+<select  formControlName= "team" >
+  <option *ngFor="let team of teams">{{team}}</option>
+</select><br>
+  <label for="skills">Skills: </label>
+
+  <input type="text" class="form-control" id="skills" value="{{selectedTeam}}" formControlName = "skills">
+
+<button type="submit" [disabled] = "memberForm.valid">Add member</button>
 </form>
-    <div *ngFor="#obj of teams" >{{obj}}</div>
 
 <div>
   <ul id="list">
-    
   </ul>
+</div>
 </div>

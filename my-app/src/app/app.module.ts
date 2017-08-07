@@ -12,7 +12,7 @@ import { MemberFormComponent } from './member_form.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
