@@ -12,6 +12,8 @@ export class AppComponent implements OnInit{
   birthday: string = '';
   selectedTeam ='';
   displaySkills = '';
+  memberForm: FormGroup;
+
   name = new FormControl('', [
     Validators.minLength(5),
   ]);
@@ -21,7 +23,6 @@ export class AppComponent implements OnInit{
 
   }
 
-memberForm: FormGroup;
 
 ngOnInit() {
       console.log(1);
@@ -37,13 +38,27 @@ ngDoCheck(){
    this.memberForm.valueChanges.subscribe((form) => {
      this.displaySkills = `${form.team}`;
    });
+   console.log(3);
    console.log(this.displaySkills);
+   this.memberForm.controls['skills'].setValue(this.displaySkills);
+   switch(this.displaySkills) {
+    case 'Ruby':
+        this.memberForm.controls['skills'].setValue("I have "+this.displaySkills+" skills");
+        break;
+    case 'PHP':
+        this.memberForm.controls['skills'].setValue("I have "+this.displaySkills+" skills");
+        break;
+    case 'FE':
+        this.memberForm.controls['skills'].setValue("I have "+this.displaySkills+": JS, HTML, CSS skills");
+        break;
+    default:
+        this.memberForm.controls['skills'].setValue("I have no skills");
+    }
 }
+
   addMember(memberForm: FormBuilder) {
-      console.log(2);
-
-    console.log(this.memberForm.value);
-
+  console.log(2);
+  console.log(this.memberForm.value);
   var list = document.getElementById("list");
   var member = document.createElement('li');
   var c = document.createElement('span');

@@ -11,9 +11,9 @@
 </select><br>
   <label for="skills">Skills: </label>
 
-  <input type="text" class="form-control" id="skills" value="{{selectedTeam}}" formControlName = "skills">
+  <input type="text" class="form-control" id="skills" value="{{team}}" formControlName = "skills">
 
-<button type="submit" [disabled] = "memberForm.valid">Add member</button>
+<button type="submit" [disabled] = "!memberForm.valid">Add member</button>
 </form>
 
 <div>
