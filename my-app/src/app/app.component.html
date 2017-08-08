@@ -1,19 +1,29 @@
-<!-- <member-form [(ngModel)]="member"></member-form> -->
 <div class="show">
 <form [formGroup]= "memberForm" (ngSubmit)="addMember(memberForm)">
+  <div formGroupName = "personal">
   <label for="name">Name</label>
   <input type="text" class="form-control" id="name" placeholder="Your name" formControlName = "name">
-  <label for="birthday">Birthday</label>
-  <input type="datetime-local" class="form-control" id="birthday" formControlName = "birthday">
+  <small [hidden]="memberForm.controls.personal.get('name').valid || (memberForm.controls.personal.get('name').pristine && !submitted)">
+      Name is required (minimum 5 characters).
+  </small><br>
 
-<select  formControlName= "team" >
-  <option *ngFor="let team of teams">{{team}}</option>
-</select><br>
+  <label for="birthday">Birthday</label>
+  <input type="date" class="form-control" id="birthday" formControlName = "birthday">
+</div>
+<div formGroupName = "company">
+  <label>Team:</label><br>
+  <select  formControlName= "team" >
+  <option>None</option>
+    <option *ngFor="let team of teams">{{team}}</option>
+  </select><br>
   <label for="skills">Skills: </label>
 
-  <input type="text" class="form-control" id="skills" value="{{team}}" formControlName = "skills">
-
-<button type="submit" [disabled] = "!memberForm.valid">Add member</button>
+  <input type="text" class="form-control" id="skills" formControlName = "skills">
+    <small [hidden]="memberForm.controls.company.get('skills').valid || (memberForm.controls.company.get('skills').pristine && !submitted)">
+      Team is invalid.
+  </small><br>
+</div>
+<button type="submit" [disabled] = "!memberForm.valid" class="btn btn-success">Add member</button>
 </form>
 
 <div>
