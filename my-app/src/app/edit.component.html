@@ -1,0 +1,16 @@
+
+
+<div class="show" *ngIf="article">
+<form [formGroup]= "articleForm" (ngSubmit)="onSubmit()">
+
+  <label for="title">Title</label>
+  <input type="text" class="form-control" placeholder="Title" id="title" formControlName = "title" value="{{article.title}}">
+
+  <label for="content">Content</label>
+  <input type="text" class="form-control" placeholder="Content" id="content" formControlName = "content" value="{{article.content}}">
+
+  <label for="author">Author: </label>
+  <input type="text" class="form-control" placeholder="author" id="author" formControlName = "author" value="{{article.author}}">
+<button type="submit" [disabled] = "!articleForm.valid" class="btn btn-success">Edit member</button>
+</form>
+</div>

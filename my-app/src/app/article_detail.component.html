@@ -1,0 +1,10 @@
+<div  class="show">
+<span>Article detail</span>
+<ul *ngIf="article">
+  <li>Id: {{article.id}}</li>
+  <li>Title: {{article.title}}</li>
+  <li><img src="{{article.image}}" class="img-circle" width="100" height="100"></li>
+  <li>Content: {{article.content}}</li>
+  <li>Author: {{article.author}}</li>
+</ul>
+</div>
