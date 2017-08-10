@@ -1,0 +1,18 @@
+<form #memberForm="ngForm" (ngSubmit)="addMember(memberForm)">
+  <label for="name">Name</label>
+  <input type="text" name="name" id="name" ngModel>
+  <label for="birthday">Birthday</label>
+  <input type="text" name="birthday" id="birthday" ngModel>
+  <select type="select" name="team">
+    <option value="Ruby">Ruby</option>
+    <option value="FE">FE</option>
+    <option value="PHP">PHP</option>
+  </select>
+  <button type="submit">Add member</button>
+</form>
+
+<div>
+  <ul class="list">
+    
+  </ul>
+</div>
