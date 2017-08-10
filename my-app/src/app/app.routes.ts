@@ -1,11 +1,3 @@
-
-// export const routes: Routes = [
-//   { path: 'detail', component: ArticleDetailComponent },
-//   { path: 'all', component: ArticleComponent }
-// ];
-
-
-
 import { Routes, RouterModule } from '@angular/router';
 import { ArticleDetailComponent } from './article_detail.component';
 import { ArticleComponent } from './article.component';
