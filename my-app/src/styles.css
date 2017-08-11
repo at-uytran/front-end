@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.show{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.container{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.router-link-active {
+  color: #000;
+  font-weight: bold;
+}

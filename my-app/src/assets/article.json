@@ -1,0 +1,25 @@
+{
+  "articles":[
+                  {
+                      "id":"1",
+                      "title":"Dac nhan tam",
+                      "image": "http://www.yenidendogus.net/forum/customavatars/avatar28446_1.gif",
+                      "content":"content 1",
+                      "author": "Vi Nguyen H.T."
+                  },
+                  {
+                      "id":"2",
+                      "title":"Think And Grow Rich",
+                      "image": "http://www.yenidendogus.net/forum/customavatars/avatar28446_1.gif",
+                      "content":"content 2",
+                      "author": "Kien Nguyen T."
+                  },
+                  {
+                      "id":"3",
+                      "title":"Hat Giong Tam Hon",
+                      "image": "http://www.yenidendogus.net/forum/customavatars/avatar28446_1.gif",
+                      "content":"content 3",
+                      "author": "Dong Nguyen"
+                  }
+                  ]
+}
