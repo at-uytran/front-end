@@ -4,9 +4,7 @@ import { DefaultComponent } from './default.component';
 import { ProductComponent } from './product/product.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'product', pathMatch: 'full' },
   { path: 'cart', component: CartComponent },
-  { path: 'add/:id', component: CartComponent },
   { path: 'product', component: ProductComponent },
   { path: '**', component: DefaultComponent },
 ];

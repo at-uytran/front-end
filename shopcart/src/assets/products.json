@@ -1,24 +1,32 @@
 {
   "products": [
       {
-        "id":"1",
-        "name":"a",
-        "price":"20000"
+        "id": 1,
+        "image": "https://www.o2.co.uk/shop/homepage/images/shop15/brand/apple/iphone7/apple-iphone-7-red-gallery-img-1.jpg",
+        "name":"Iphone 7",
+        "price":20000,
+        "quantity": 1
       },
       {
-        "id":"2",
-        "name":"b",
-        "price":"20000"
+        "id": 2,
+        "image": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone7plus/iphone7plus-colors.jpg",
+        "name":"Iphone 7+",
+        "price":20000,
+        "quantity": 1
       },
       {
-        "id":"3",
-        "name":"c",
-        "price":"20000"
+        "id": 3,
+        "image": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone_se/iphone-se-colors.jpg",
+        "name":"Iphone se",
+        "price":20000,
+        "quantity": 1
       },
       {
-        "id":"4",
-        "name":"e",
-        "price":"20000"
+        "id": 4,
+        "image": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-6splus-colors.jpg",
+        "name":"Iphone 6s",
+        "price":20000,
+        "quantity": 1
       }
   ]
 }

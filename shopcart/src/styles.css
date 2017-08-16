@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+.cart{
+  float: right;
+  width: 25%;
+}
+.cart img{
+  height: 70px;
+  width: 70px;
+}
+.show{
+  display: inline-block;
+}
+.item{
+  position: relative;
+  box-sizing: border-box;
+/*  border: 1px solid #ebebeb;
+*/  width: 22%;
+  display: inline-block;
+  margin: 10px;
+}
+.item img{
+  height: 70px;
+  width: 100px;
+}
+.item li{
+  list-style: none;
+}
+.menu{
+  width: 70%;
+  float: left;
+}

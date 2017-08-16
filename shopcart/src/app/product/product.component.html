@@ -1,21 +1,20 @@
-<p>
-  product works!
-</p>
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Option</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of products">
-      <td>{{product.id}}</td>
-      <td>{{product.name}}</td>
-      <td>{{product.price}}</td>
-      <td><a [routerLink]="['/add',product.id]" routerLinkActive="router-link-active"  >add</a></td>
-    </tr>
-  </tbody>
-</table>
+
+<div class="show">
+<h1>
+  Click add to add this product to your cart!
+</h1>
+<div class="item" *ngFor="let product of products">
+    <ul  class="list-group">
+      <li><img src="{{product.image}}"></li>
+      <li class="list-item">Id: {{product.id}}</li>
+      <li class="list-item">Name: {{product.name}}</li>
+      <li class="list-item">Price: {{product.price}}</li>
+<!--       <li><p>Input your quantity:</p>
+      <select name="quantity" multiple>
+        <option value="{{product.price}}"></option>
+      </select>
+      </li> -->
+      <li class="list-item"><button (click) = "addList(product)" class="btn btn-success">add </button></li>
+    </ul>
+</div>
+</div>
