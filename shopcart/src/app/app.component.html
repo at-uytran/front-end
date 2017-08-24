@@ -1,0 +1,16 @@
+<div class="container">
+<nav class="menu navbar navbar-default">
+  <ul class="nav nav-pills">
+    <li><a [routerLink]="['product']" routerLinkActive="router-link-active" >All Product</a></li>
+    <li><a [routerLink]="['cart']" routerLinkActive="router-link-active"  >My cart</a></li>
+  </ul>
+</nav>
+<div class="cart">
+  <a [routerLink]="['cart']" routerLinkActive="router-link-active"  ><img src="https://cdn4.iconfinder.com/data/icons/for-your-interface-free-samples/128/Cart-512.png" alt="cart">
+  <p>Quantity:{{totalQuantity}}</p>
+  </a>
+</div>
+<div>
+<router-outlet></router-outlet>
+</div>
+</div>

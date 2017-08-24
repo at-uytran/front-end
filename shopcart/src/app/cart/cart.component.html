@@ -1,0 +1,15 @@
+<div class="show">
+
+<h1>
+  Your cart
+</h1>
+<div class="item" *ngFor="let item of list">
+<ul >
+  <li><img src="{{item.image}}"></li>
+  <li>{{item.name}}</li>
+  <li>{{item.price}}</li>
+  <li>{{item.quantity}}</li>
+</ul>
+</div>
+<h2>Total items you add: {{totalQuantity}}</h2>
+<h2>Total Price: {{totalPrice}}</h2>
